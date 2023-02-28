@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" type="text/css" href="pageCSS.css"/>
+</head>
+
+<body>
+ 
+<div class = "container"> <!--Start of container div-->
+<form id="form1" name="form1" method="post" action="formHandler.php">
+
+
+
+
+  <legend>Contact Us</legend>
+   <p>
+    <label for="name">Name</label>
+    <br>
+    <input type="text" name="name" id="name" required/>
+  </p>
+ 
+  <p>
+    <label for="email">Email</label>
+    <br>
+    <input type="email" name="email" id="email" required/>
+  </p>
+ 
+  <label for="reasonForContact">Services Needed</label>
+<br>
+<br>
+
+<select name="reasonForContact" id="reasonForContact" required>
+  <option value="">Select Service</option>
+  <option value="Product Issues">Product issues</option>
+  <option value="Q&C">Questions and concerns </option>
+  <option value="technicalProblems">Technical Problems</option>
+  <option value="other">Other</option>
+</select>
+
+<br>
+<br>
+
+  <label for="comments">Additional comments</label></p>
+
+  <textarea id="comments" name="comments" rows="5" cols="50"> </textarea>
+  <br>
+  
+  <p>
+    <input class = "buttons" type="submit" name="button" id="button" value="Submit" />
+    <input class = "buttons" type="reset" name="button2" id="button2" value="Reset" />
+  </p>
+</form>
+
+</div>
+<!--End of container div-->
+
+</body>
+</html>
