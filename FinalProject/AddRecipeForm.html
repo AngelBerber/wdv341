@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type ="text/css" href="CSSStyle.css">
+    <link rel="stylesheet" type ="text/css" href="CSSStyle.scss">
+
+    <link rel="stylesheet" type ="text/css" href="CSSStyleMidSized.css">
+    <link rel="stylesheet" type ="text/css" href="CSSStyleMidSized.css">
+
+    <link rel="stylesheet" type ="text/css" href="CSSStyleSmallSized.scss">
+    <link rel="stylesheet" type ="text/css" href="CSSStyleSmallSized.css">
+    <script src="JavaScriptFile.js"></script> 
+    <title>Recipe Manager</title>
+</head>
+
+<body>
+    <header>
+        
+      <img src="Images/Logo.png" alt = "logo" class = "logo">
+      <nav class="navbar">
+          
+        <ul class="nav-list">
+          <li class="nav-item -top"><a href="Home.html">Home</a></li>
+              <li class="nav-item -top"><a href="Recipes.php">Recipes</a></li>
+              <li class="nav-item -top"><a href="AddRecipeForm.html">Add Recipe</a></li>
+              <li class="nav-item -top"><a href="Contact.html">Contact</a></li>
+              <li class="nav-item -top"><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+        
+        
+          <div class = "innerBigTextBox">
+        <h1>Add a Recipe</h1>
+          </div>
+
+          <div class = "innerTextBox">
+            <p style="text-align: center;">Fill out the following information and your recipe will be displayed on the recipe page!</p>
+          </div>
+    </header>
+
+
+    <div class = "formContainer">
+    <form id="form1" name="form1" method="post" action="myPHP.php">
+
+      <div class = "form-row">
+        <label for="recipe-name">Recipe Name:</label>
+        <input type="text" id="recipe-name" name="recipe-name" required><br><br>
+      
+        <label for="prep-time-hours">Prep Time (in Hours):</label>
+        <input type="number" id="prep-time-hours" name="prep-time-hours" min="0" required><br><br>
+
+        <label for="prep-time-Minutes">Prep Time (in minutes):</label>
+        <input type="number" id="prep-time-Minutes" name="prep-time-Minutes" min="0" required><br><br>
+
+        <!-- Honey pot field-->
+
+        <p style="display: none;">
+        <label for="Honey">Honey:</label>
+        <input type="text" name="Honey" id="Honey" />
+        </p>
+
+        <!--End of Honey pot-->
+      
+        <label for="cook-time-hours">Cook Time (in Hours):</label>
+        <input type="number" id="cook-time-hours" name="cook-time-hours" min="0" required><br><br>
+
+        <label for="cook-time-Minutes">Cook Time (in minutes):</label>
+        <input type="number" id="cook-time-Minutes" name="cook-time-Minutes" min="0" required><br><br>
+      
+        <label for="serving-size">Serving Size:</label>
+        <input type="number" id="serving-size" name="serving-size" min="1" required><br><br>
+      
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty" name="difficulty" required>
+            <option value="">Select</option>
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+        </select><br><br>
+
+        <label for="image-url">Image URL:</label>
+        <input type="text" id="image-url" name="image-url" required><br><br>
+
+        <label for="instructions">Instructions:</label><br>
+        <textarea id="instructions" name="instructions" rows="10"></textarea><br><br>
+      
+        <input type="submit" value="Submit Recipe">
+        <button type="reset" value="reset">Reset</button>
+
+      </div>
+
+
+
+      <div class = "form-row">
+        <label for="ingredient">Ingredient</label>
+        <input type="text" id="comment-input" name="ingredient" placeholder="e.g. flour, sugar, etc.">
+        
+        <label for="measurement">Measurement</label>
+        <select id="measurement" name="measurement">
+          <option value="" selected disabled>Select a measurement</option>
+          <option value="tsp">tsp</option>
+          <option value="tbsp">tbsp</option>
+          <option value="cup">cup</option>
+          <option value="oz">oz</option>
+          <option value="g">g</option>
+        </select>
+        
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="quantity" placeholder="e.g. 1, 2, etc." >
+
+        <!-- Honey pot field-->
+
+        <p style="display: none;">
+          <label for="Honey">Honey:</label>
+          <input type="text" name="Honey" id="Honey" />
+          </p>
+  
+          <!--End of Honey pot-->
+
+        <button value="Add Ingredient" onclick="addComment()">Add</button>
+        <button onclick="deleteComment()">Delete Previous</button>
+
+
+        <!-- Comment box -->
+    
+        <h3>Ingredients:</h3>
+        <label for="comment-box"></label><br>
+         <textarea id="comment-box" readonly></textarea>
+      
+      </div>
+      </form>
+    </div>
+      
+
+
+
+
+    <footer>
+      <div>
+        <a href="https://www.linkedin.com/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo" class="social-icons"></a>
+        <a href="https://github.com/"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Github Logo" class="social-icons"></a>
+      </div>
+    </footer>
+</body>
+</html>
